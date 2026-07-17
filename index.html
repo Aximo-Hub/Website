@@ -56,6 +56,12 @@ a{color:var(--ink)}
 @keyframes axisDraw{from{transform:scaleY(0)}to{transform:scaleY(1)}}
 input,textarea,select,button{font-family:var(--font-text)}
 select{appearance:none;-webkit-appearance:none}
+html{font-size:16px}
+@media (max-width:600px){html{font-size:15.5px}}
+@media (max-width:400px){html{font-size:14px}}
+@media (max-width:340px){html{font-size:12.5px}}
+@media (min-width:1800px){html{font-size:18px}}
+@media (min-width:2400px){html{font-size:20px}}
 @media (prefers-reduced-motion: reduce){*{animation-duration:0.001ms !important;animation-iteration-count:1 !important;transition-duration:0.001ms !important}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://aximohub.com/#org","name":"Aximo","legalName":"Aximo","url":"https://aximohub.com/","logo":"https://aximohub.com/assets/aximo-mark.png","image":"https://aximohub.com/assets/aximo-og.png","description":"Advisory and execution firm in Nairobi taking companies and investors from decision to result in East Africa.","email":"hello@aximohub.com","telephone":"+254716688988","foundingLocation":"Nairobi, Kenya","address":{"@type":"PostalAddress","addressLocality":"Nairobi","addressRegion":"Nairobi","addressCountry":"KE"},"areaServed":[{"@type":"Country","name":"Kenya"},{"@type":"Place","name":"East Africa"}],"contactPoint":[{"@type":"ContactPoint","telephone":"+254716688988","email":"hello@aximohub.com","contactType":"customer service","areaServed":"KE","availableLanguage":["en","sw"]}],"sameAs":["https://www.linkedin.com/company/aximohub","https://x.com/aximohub","https://www.instagram.com/aximohub","https://www.facebook.com/aximohub"]},{"@type":"WebSite","@id":"https://aximohub.com/#website","url":"https://aximohub.com/","name":"Aximo","publisher":{"@id":"https://aximohub.com/#org"},"inLanguage":"en-GB"},{"@type":"ProfessionalService","@id":"https://aximohub.com/#service","name":"Aximo","image":"https://aximohub.com/assets/aximo-og.png","url":"https://aximohub.com/","telephone":"+254716688988","email":"hello@aximohub.com","priceRange":"$$$","address":{"@type":"PostalAddress","addressLocality":"Nairobi","addressCountry":"KE"},"areaServed":[{"@type":"Country","name":"Kenya"},{"@type":"Place","name":"East Africa"}],"parentOrganization":{"@id":"https://aximohub.com/#org"},"hasOfferCatalog":{"@type":"OfferCatalog","name":"Aximo engines","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Marketing and brand growth"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Market entry and expansion"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Legal and compliance"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Finance and investment readiness"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Strategy and operations"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"People and culture"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Technology and digital infrastructure"}}]}},{"@type":"FAQPage","@id":"https://aximohub.com/#faq","mainEntity":[{"@type":"Question","name":"What does Aximo do?","acceptedAnswer":{"@type":"Answer","text":"Aximo is an advisory and execution firm in Nairobi that takes companies and investors from decision to result in East Africa. It coordinates marketing, market entry, legal, finance, strategy, people, and technology under one accountable relationship, and documents the outcome of every engagement in writing."}},{"@type":"Question","name":"Where is Aximo based?","acceptedAnswer":{"@type":"Answer","text":"Aximo is based in Nairobi, Kenya, and serves companies and investors entering, expanding, or growing across East Africa."}},{"@type":"Question","name":"Who does Aximo work with?","acceptedAnswer":{"@type":"Answer","text":"Foreign companies entering Kenya or using it as an East Africa hub, investors deploying capital into the region, established East African businesses expanding or raising capital, and selected high-growth enterprises."}},{"@type":"Question","name":"How does an Aximo engagement work?","acceptedAnswer":{"@type":"Answer","text":"Every engagement follows five steps: briefing, diagnosis and matching, a working session with a written brief within 48 hours, the engagement with scope and fee agreed in writing, and a written outcome report. Aximo then follows through for 30 days after close."}},{"@type":"Question","name":"How do I contact Aximo?","acceptedAnswer":{"@type":"Answer","text":"Email hello@aximohub.com or call and WhatsApp +254 716 688 988. Every briefing receives a personal, considered response within one working day."}}]}]}</script>
@@ -109,11 +115,11 @@ select{appearance:none;-webkit-appearance:none}
 <main id="main">
 
 <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
-  <section style="position:relative;min-height:600px;height:90vh;display:flex;align-items:flex-end;overflow:hidden;background:linear-gradient(135deg,#0c3a5e,#00846d)">
+  <section style="position:relative;min-height:clamp(440px,88vh,940px);display:flex;align-items:flex-end;overflow:hidden;background:linear-gradient(135deg,#0c3a5e,#00846d)">
     <img src="assets/hero-nairobi-2.png" alt="Nairobi skyline" width="1600" height="900" fetchpriority="high" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(1.04) contrast(1.04);animation:heroZoom 2600ms ease-out both">
     <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(100deg,rgba(0,57,95,0.92) 0%,rgba(0,57,95,0.55) 45%,rgba(0,132,109,0.32) 100%)"></div>
     <div aria-hidden="true" style="position:absolute;left:0;right:0;bottom:0;height:240px;background:linear-gradient(to bottom,rgba(235,239,242,0),var(--ground))"></div>
-    <div style="{{ wrap }}position:relative;padding-bottom:clamp(52px,8vw,116px);padding-top:120px">
+    <div style="{{ wrap }}position:relative;padding-bottom:clamp(48px,8vw,116px);padding-top:clamp(96px,14vh,128px)">
       <div style="{{ grid12 }}">
         <div style="{{ c_1_8 }}">
           <h1 style="margin:0;color:var(--card);font:700 clamp(2.85rem,6.2vw,5.75rem)/0.98 var(--font-display);letter-spacing:-0.035em;max-width:16ch;text-wrap:balance">From decision to result in East Africa.</h1>
@@ -268,7 +274,7 @@ select{appearance:none;-webkit-appearance:none}
     <div style="{{ grid12 }}">
       <div data-reveal style="{{ c_1_5 }}"><h2 style="{{ h2 }}">The problem we solve.</h2><div style="display:flex;flex-direction:column;gap:18px;margin-top:20px;max-width:62ch"><p style="{{ body }}">East Africa is one of the fastest growing investment destinations on the continent, and Kenya is its commercial hub. Capital and companies are arriving. What has been missing is the execution infrastructure to receive them.</p><p style="{{ body }}">A company entering the region must coordinate lawyers, accountants, recruiters, banks, regulators, and agencies in a market it does not yet know. The expertise exists, but it is fragmented: priced for multinationals at the top end, unverifiable at the bottom end, and accountable to nobody once the advice is delivered. Projects stall, costs multiply, and capital stays on the sidelines.</p><p style="{{ body }}">Aximo replaces that fragmentation with one relationship. We diagnose the situation, assemble the right expertise, run the work through a single structured process, and answer for the outcome.</p></div></div>
       <div data-reveal style="{{ c_7_12 }}"><div style="{{ mapCard }}">
-        <iframe title="Aximo location in Nairobi, Kenya" src="https://www.openstreetmap.org/export/embed.html?bbox=36.7700%2C-1.3300%2C36.8700%2C-1.2400&layer=mapnik&marker=-1.2864%2C36.8172" loading="lazy" style="width:100%;height:clamp(300px,42vw,440px);border:0;display:block"></iframe>
+        <iframe title="Aximo location in Nairobi, Kenya" src="https://www.openstreetmap.org/export/embed.html?bbox=36.8095%2C-1.2935%2C36.8270%2C-1.2835&layer=mapnik&marker=-1.28855%2C36.81835" loading="lazy" style="width:100%;height:clamp(320px,44vw,460px);border:0;display:block;filter:saturate(0.82) contrast(1.03)"></iframe>
         <div style="{{ mapFoot }}"><span style="{{ mapDot }}"></span><span><span style="color:var(--ink);font:500 15px var(--font-text)">Nairobi, Kenya</span><span style="display:block;color:var(--ink-soft);font:400 13px var(--font-text)">Our base for East Africa</span></span></div>
       </div></div>
     </div>
@@ -281,15 +287,54 @@ select{appearance:none;-webkit-appearance:none}
     </div>
   </section>
 
-    <section style="{{ wrap }}padding:0 0 clamp(60px,8vw,120px)">
+      <section style="{{ wrap }}padding:0 0 clamp(60px,8vw,120px)">
     <div style="{{ grid12 }}">
       <div data-reveal style="{{ c_1_5 }}"><h2 style="{{ h2 }}">The people accountable.</h2></div>
       <div data-reveal style="{{ c_7_11 }}"><p style="{{ body }}">One named owner sits on every engagement. These are the people who answer for the work.</p></div>
     </div>
     <div style="{{ teamGrid }}">
-      <div data-reveal style="{{ teamCard }}" style-hover="transform:translateY(-6px);box-shadow:var(--shadow-lift)"><div style="{{ teamPic }}"><div aria-hidden="true" style="{{ teamPhoto }}"></div><div aria-hidden="true" style="{{ teamOverlay }}"></div><a href="https://www.linkedin.com/company/aximohub" aria-label="LinkedIn" style="{{ teamLink }}" style-hover="background:var(--green);color:var(--card)"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.5 8h4V24h-4V8zM8 8h3.8v2.2h.05c.53-1 1.83-2.2 3.77-2.2 4.03 0 4.78 2.65 4.78 6.1V24h-4v-7.1c0-1.7-.03-3.9-2.38-3.9-2.38 0-2.74 1.86-2.74 3.78V24H8V8z"></path></svg></a><div style="{{ teamCaption }}"><span style="{{ teamName }}">[TEAM MEMBER 1]</span><span style="{{ teamRole }}">[ROLE]</span></div></div></div>
-      <div data-reveal style="{{ teamCard }}" style-hover="transform:translateY(-6px);box-shadow:var(--shadow-lift)"><div style="{{ teamPic }}"><div aria-hidden="true" style="{{ teamPhoto }}"></div><div aria-hidden="true" style="{{ teamOverlay }}"></div><a href="https://www.linkedin.com/company/aximohub" aria-label="LinkedIn" style="{{ teamLink }}" style-hover="background:var(--green);color:var(--card)"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.5 8h4V24h-4V8zM8 8h3.8v2.2h.05c.53-1 1.83-2.2 3.77-2.2 4.03 0 4.78 2.65 4.78 6.1V24h-4v-7.1c0-1.7-.03-3.9-2.38-3.9-2.38 0-2.74 1.86-2.74 3.78V24H8V8z"></path></svg></a><div style="{{ teamCaption }}"><span style="{{ teamName }}">[TEAM MEMBER 2]</span><span style="{{ teamRole }}">[ROLE]</span></div></div></div>
-      <div data-reveal style="{{ teamCard }}" style-hover="transform:translateY(-6px);box-shadow:var(--shadow-lift)"><div style="{{ teamPic }}"><div aria-hidden="true" style="{{ teamPhoto }}"></div><div aria-hidden="true" style="{{ teamOverlay }}"></div><a href="https://www.linkedin.com/company/aximohub" aria-label="LinkedIn" style="{{ teamLink }}" style-hover="background:var(--green);color:var(--card)"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.5 8h4V24h-4V8zM8 8h3.8v2.2h.05c.53-1 1.83-2.2 3.77-2.2 4.03 0 4.78 2.65 4.78 6.1V24h-4v-7.1c0-1.7-.03-3.9-2.38-3.9-2.38 0-2.74 1.86-2.74 3.78V24H8V8z"></path></svg></a><div style="{{ teamCaption }}"><span style="{{ teamName }}">[TEAM MEMBER 3]</span><span style="{{ teamRole }}">[ROLE]</span></div></div></div>
+      <div data-reveal style="{{ teamCard }}" style-hover="--bioY:0%;--bioO:1;transform:translateY(-6px);box-shadow:var(--shadow-lift)">
+        <div style="{{ teamPic }}">
+          <img src="assets/team-samuel.png" alt="Samuel Ogera" width="640" height="800" loading="lazy" style="{{ teamImg }}">
+          <div aria-hidden="true" style="{{ teamOverlay }}"></div>
+          <a href="https://www.linkedin.com/in/samuelogera/" target="_blank" rel="noopener" aria-label="Samuel Ogera on LinkedIn" style="{{ teamLink }}" style-hover="background:var(--green);color:var(--card)"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.5 8h4V24h-4V8zM8 8h3.8v2.2h.05c.53-1 1.83-2.2 3.77-2.2 4.03 0 4.78 2.65 4.78 6.1V24h-4v-7.1c0-1.7-.03-3.9-2.38-3.9-2.38 0-2.74 1.86-2.74 3.78V24H8V8z"></path></svg></a>
+          <div style="{{ teamCaption }}"><span style="{{ teamName }}">Samuel Ogera</span><span style="{{ teamRole }}">Co-founder & CEO</span></div>
+          <div style="{{ teamBio }}">
+            <span style="{{ teamBioName }}">Samuel Ogera</span>
+            <span style="{{ teamBioRole }}">Co-founder & CEO</span>
+            <p style="{{ teamBioText }}">Samuel leads Aximo’s business — client relationships, growth, and the standard every engagement is measured against, from the first briefing to the written outcome.</p>
+            <a href="https://www.linkedin.com/in/samuelogera/" target="_blank" rel="noopener" style="{{ teamBioLink }}" style-hover="background:var(--green);color:var(--card)"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.5 8h4V24h-4V8zM8 8h3.8v2.2h.05c.53-1 1.83-2.2 3.77-2.2 4.03 0 4.78 2.65 4.78 6.1V24h-4v-7.1c0-1.7-.03-3.9-2.38-3.9-2.38 0-2.74 1.86-2.74 3.78V24H8V8z"></path></svg><span>View LinkedIn</span></a>
+          </div>
+        </div>
+      </div>
+      <div data-reveal style="{{ teamCard }}" style-hover="--bioY:0%;--bioO:1;transform:translateY(-6px);box-shadow:var(--shadow-lift)">
+        <div style="{{ teamPic }}">
+          <img src="assets/team-mercy.png" alt="Mercy Chemutai" width="640" height="800" loading="lazy" style="{{ teamImg }}">
+          <div aria-hidden="true" style="{{ teamOverlay }}"></div>
+          <a href="https://www.linkedin.com/in/chemutairuto/" target="_blank" rel="noopener" aria-label="Mercy Chemutai on LinkedIn" style="{{ teamLink }}" style-hover="background:var(--green);color:var(--card)"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.5 8h4V24h-4V8zM8 8h3.8v2.2h.05c.53-1 1.83-2.2 3.77-2.2 4.03 0 4.78 2.65 4.78 6.1V24h-4v-7.1c0-1.7-.03-3.9-2.38-3.9-2.38 0-2.74 1.86-2.74 3.78V24H8V8z"></path></svg></a>
+          <div style="{{ teamCaption }}"><span style="{{ teamName }}">Mercy Chemutai</span><span style="{{ teamRole }}">Co-founder, Marketing</span></div>
+          <div style="{{ teamBio }}">
+            <span style="{{ teamBioName }}">Mercy Chemutai</span>
+            <span style="{{ teamBioRole }}">Co-founder, Marketing</span>
+            <p style="{{ teamBioText }}">Mercy leads Aximo’s marketing and brand practice, turning positioning and go-to-market plans into work that is executable the next morning.</p>
+            <a href="https://www.linkedin.com/in/chemutairuto/" target="_blank" rel="noopener" style="{{ teamBioLink }}" style-hover="background:var(--green);color:var(--card)"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.5 8h4V24h-4V8zM8 8h3.8v2.2h.05c.53-1 1.83-2.2 3.77-2.2 4.03 0 4.78 2.65 4.78 6.1V24h-4v-7.1c0-1.7-.03-3.9-2.38-3.9-2.38 0-2.74 1.86-2.74 3.78V24H8V8z"></path></svg><span>View LinkedIn</span></a>
+          </div>
+        </div>
+      </div>
+      <div data-reveal style="{{ teamCard }}" style-hover="--bioY:0%;--bioO:1;transform:translateY(-6px);box-shadow:var(--shadow-lift)">
+        <div style="{{ teamPic }}">
+          <img src="assets/team-sarah.png" alt="Sarah Wahinya" width="640" height="800" loading="lazy" style="{{ teamImg }}">
+          <div aria-hidden="true" style="{{ teamOverlay }}"></div>
+          <a href="https://www.linkedin.com/in/sarah-wahinya/" target="_blank" rel="noopener" aria-label="Sarah Wahinya on LinkedIn" style="{{ teamLink }}" style-hover="background:var(--green);color:var(--card)"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.5 8h4V24h-4V8zM8 8h3.8v2.2h.05c.53-1 1.83-2.2 3.77-2.2 4.03 0 4.78 2.65 4.78 6.1V24h-4v-7.1c0-1.7-.03-3.9-2.38-3.9-2.38 0-2.74 1.86-2.74 3.78V24H8V8z"></path></svg></a>
+          <div style="{{ teamCaption }}"><span style="{{ teamName }}">Sarah Wahinya</span><span style="{{ teamRole }}">Co-founder, Operations</span></div>
+          <div style="{{ teamBio }}">
+            <span style="{{ teamBioName }}">Sarah Wahinya</span>
+            <span style="{{ teamBioRole }}">Co-founder, Operations</span>
+            <p style="{{ teamBioText }}">Sarah runs Aximo’s operations, keeping every engagement on scope, on timeline, and delivered to one consistent standard.</p>
+            <a href="https://www.linkedin.com/in/sarah-wahinya/" target="_blank" rel="noopener" style="{{ teamBioLink }}" style-hover="background:var(--green);color:var(--card)"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.5 8h4V24h-4V8zM8 8h3.8v2.2h.05c.53-1 1.83-2.2 3.77-2.2 4.03 0 4.78 2.65 4.78 6.1V24h-4v-7.1c0-1.7-.03-3.9-2.38-3.9-2.38 0-2.74 1.86-2.74 3.78V24H8V8z"></path></svg><span>View LinkedIn</span></a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -438,7 +483,7 @@ select{appearance:none;-webkit-appearance:none}
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
   state = {
-    page:'home', menu:false, isMobile:false, isTablet:false, scrolled:false, engine:0,
+    page:'home', menu:false, isMobile:false, isTablet:false, isXS:false, scrolled:false, engine:0,
     reduceMotion: !!(typeof window!=='undefined' && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches),
     form:{fullname:'',email:'',company:'',country:'',objective:'',timeline:'',website:''},
     errors:{}, sent:'idle'
@@ -459,7 +504,7 @@ class Component extends DCLogic {
     if(prev.menu!==this.state.menu){ try{ document.body.style.overflow=this.state.menu?'hidden':''; }catch(e){} }
   }
   componentWillUnmount(){ try{window.removeEventListener('resize',this._rz);window.removeEventListener('scroll',this._sc,{capture:true});document.removeEventListener('scroll',this._sc,{capture:true});if(this._io)this._io.disconnect();}catch(e){} }
-  updateLayout(){ const vw=window.innerWidth||1200; const mobile=vw<860; const tablet=vw>=860&&vw<1200; if(mobile!==this.state.isMobile||tablet!==this.state.isTablet) this.setState({isMobile:mobile,isTablet:tablet}); }
+  updateLayout(){ const vw=window.innerWidth||1200; const mobile=vw<860; const tablet=vw>=860&&vw<1200; const xs=vw<400; if(mobile!==this.state.isMobile||tablet!==this.state.isTablet||xs!==this.state.isXS) this.setState({isMobile:mobile,isTablet:tablet,isXS:xs}); }
   setTitle(){ const t={home:'Aximo. Advisory and execution in East Africa. | Nairobi',services:'Services. Seven engines, one axis. | Aximo',about:'About Aximo. One axis, seven engines. | Nairobi',work:'Work with us. | Aximo',contact:'Contact Aximo. Begin a briefing. | Nairobi',privacy:'Privacy policy. | Aximo',terms:'Terms and agreement. | Aximo'}; try{document.title=t[this.state.page]||'Aximo';}catch(e){} }
   go(p){ return (e)=>{ if(e&&e.preventDefault)e.preventDefault(); this.setState({page:p,menu:false}); try{window.scrollTo(0,0);}catch(err){} }; }
   setEngine(i){ return ()=>{ this.setState({engine:i}); }; }
@@ -512,6 +557,15 @@ class Component extends DCLogic {
   }
   axis(){
     const rm=this.state.reduceMotion;
+    if(this.state.isMobile){
+      const names=[['marketing','Marketing & brand'],['entry','Market entry'],['legal','Legal & compliance'],['finance','Finance'],['strategy','Strategy & operations'],['people','People & culture'],['tech','Technology']];
+      const rows=names.map((it,i)=>React.createElement('div',{key:i,style:{position:'relative',zIndex:1,display:'flex',alignItems:'center',gap:'14px'}},[
+        React.createElement('div',{key:'c',style:{flex:'none',width:'50px',height:'50px',borderRadius:'13px',background:'var(--card)',boxShadow:'var(--shadow-card)',display:'flex',alignItems:'center',justifyContent:'center'}}, this.icon(it[0],false,26)),
+        React.createElement('span',{key:'t',style:{color:'var(--ink)',font:"500 1.0625rem var(--font-text)"}}, it[1])
+      ]));
+      const line=React.createElement('div',{key:'l','aria-hidden':'true',style:{position:'absolute',left:'24px',top:'25px',bottom:'25px',width:'2px',background:'var(--green)'}});
+      return React.createElement('div',{style:{position:'relative',display:'flex',flexDirection:'column',gap:'16px'}},[line].concat(rows));
+    }
     const specs=['marketing','entry','legal','finance','strategy','people','tech'];
     const H=480, gap=68, cardH=64, startY=8, cx=140;
     const line=React.createElement('div',{key:'line','aria-hidden':'true',style:{position:'absolute',left:cx+'px',top:'0',width:'2px',height:H+'px',background:'var(--green)',transformOrigin:'top',animation:rm?'none':'axisDraw 900ms cubic-bezier(0.22,1,0.36,1) both'}});
@@ -535,20 +589,20 @@ class Component extends DCLogic {
     return items.map((it,i)=>React.createElement('a',{key:i,href:'#sec-'+i,style:{color:'var(--ink-soft)',font:"400 14px/1.4 var(--font-text)",textDecoration:'none'}},(i+1)+'. '+it.h));
   }
   renderVals(){
-    const s=this.state; const m=s.isMobile; const t=s.isTablet; const M=(o)=> m?{}:o;
+    const s=this.state; const m=s.isMobile; const t=s.isTablet; const xs=s.isXS; const M=(o)=> m?{}:o;
     const col=(desk,tab)=> m?{}:{gridColumn: t?tab:desk};
-    const wrap = 'width:'+(m?'calc(100% - 40px)':'min(1280px, 100% - 72px)')+';margin:0 auto;';
-    const grid12 = m?{display:'flex',flexDirection:'column',gap:'20px'}:{display:'grid',gridTemplateColumns:'repeat(12,1fr)',columnGap:'24px',rowGap:'24px',alignItems:'start'};
+    const wrap = 'width:'+(xs?'calc(100% - 24px)':(m?'calc(100% - 36px)':'min(1340px, 100% - 80px)'))+';margin:0 auto;';
+    const grid12 = m?{display:'flex',flexDirection:'column',gap:xs?'14px':'20px'}:{display:'grid',gridTemplateColumns:'repeat(12,1fr)',columnGap:'24px',rowGap:'24px',alignItems:'start'};
     const bandItems = m?{display:'flex',flexDirection:'column',gap:'36px'}:{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'44px 40px'};
     const footerGrid = m?{display:'flex',flexDirection:'column',gap:'36px'}:(t?{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'40px'}:{display:'grid',gridTemplateColumns:'2fr 1fr 1.4fr 1.2fr',gap:'40px'});
-    const card = 'background:var(--card);border-radius:var(--r-card);padding:'+(m?'28px':'36px')+';box-shadow:var(--shadow-card);';
+    const card = 'background:var(--card);border-radius:var(--r-card);padding:'+(xs?'20px':(m?'28px':'36px'))+';box-shadow:var(--shadow-card);';
     const cardNavy = 'background:var(--ink);border-radius:var(--r-card);padding:'+(m?'32px':'48px')+';box-shadow:var(--shadow-card);';
-    const cardClosing = 'background:var(--card);border-radius:var(--r-card);padding:'+(m?'40px 24px':'80px')+';box-shadow:var(--shadow-card);text-align:center;';
-    const statBase = 'position:relative;overflow:hidden;background:var(--card);border-radius:var(--r-card);padding:'+(m?'28px':'36px')+';box-shadow:var(--shadow-card);min-height:100%;';
+    const cardClosing = 'background:var(--card);border-radius:var(--r-card);padding:'+(xs?'28px 20px':(m?'40px 24px':'80px'))+';box-shadow:var(--shadow-card);text-align:center;';
+    const statBase = 'position:relative;overflow:hidden;background:var(--card);border-radius:var(--r-card);padding:'+(xs?'20px':(m?'28px':'36px'))+';box-shadow:var(--shadow-card);min-height:100%;';
     const cardImg = 'display:flex;flex-direction:column;background:var(--card);border-radius:var(--r-card);overflow:hidden;box-shadow:var(--shadow-card);transition:transform 320ms cubic-bezier(0.22,1,0.36,1),box-shadow 320ms cubic-bezier(0.22,1,0.36,1);';
     const cardImgPad = 'padding:'+(m?'24px':'28px')+';';
     const picWrap = 'position:relative;aspect-ratio:16/10;overflow:hidden;background:linear-gradient(135deg,#0c3a5e,#00846d);';
-    const picWrapTall = 'position:relative;aspect-ratio:4/5;border-radius:var(--r-sm);overflow:hidden;background:linear-gradient(135deg,#0c3a5e,#00846d);';
+    const picWrapTall = 'position:relative;aspect-ratio:'+(m?'4/3':'3/3.2')+';border-radius:var(--r-sm);overflow:hidden;background:linear-gradient(135deg,#0c3a5e,#00846d);';
     const picWrapWide = 'position:relative;aspect-ratio:'+(m?'4/3':'16/6')+';border-radius:var(--r-sm);overflow:hidden;background:linear-gradient(135deg,#0c3a5e,#00846d);';
     const picImg = 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:var(--imgF,grayscale(1) contrast(1.05) brightness(1.02));transition:filter 550ms ease;';
     const picDuoS = 'position:absolute;inset:0;background:linear-gradient(135deg,var(--ink),var(--green));mix-blend-mode:screen;opacity:var(--duoS,0.5);transition:opacity 550ms ease;pointer-events:none;';
@@ -577,7 +631,7 @@ class Component extends DCLogic {
     const wordmarkStyle = 'color:'+(overHero?'var(--card)':'var(--ink)')+';font:500 16px var(--font-text);letter-spacing:0.3em;padding-left:0.3em;transition:color 320ms;';
     const navLinkBase = 'position:relative;color:'+(overHero?'var(--card)':'var(--ink)')+';text-decoration:none;font:500 0.9375rem var(--font-text);transition:color 320ms;';
     const navDot = 'position:absolute;left:50%;bottom:-11px;transform:translateX(-50%);width:5px;height:5px;border-radius:999px;background:var(--green);';
-    const navBtn = 'display:inline-flex;align-items:center;gap:12px;color:'+(overHero?'var(--card)':'var(--ink)')+';background:'+(overHero?'rgba(255,255,255,0.12)':'var(--ground)')+';border-radius:999px;padding:7px 7px 7px 20px;font:500 0.9375rem var(--font-text);text-decoration:none;transition:all 200ms;';
+    const navBtn = 'pointer-events:auto;display:inline-flex;align-items:center;gap:12px;color:'+(overHero?'var(--card)':'var(--ink)')+';background:'+(overHero?'rgba(255,255,255,0.12)':'var(--ground)')+';border-radius:999px;padding:7px 7px 7px 20px;font:500 0.9375rem var(--font-text);text-decoration:none;transition:all 200ms;';
     const fLabel = "display:block;margin-bottom:8px;color:var(--ink);font:500 0.875rem var(--font-text);letter-spacing:0.01em;";
     const fErr = "display:block;margin-top:8px;color:var(--error);font:400 14px var(--font-text);";
     const formGrid2 = m?{display:'flex',flexDirection:'column',gap:'20px'}:{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'20px'};
@@ -653,15 +707,22 @@ class Component extends DCLogic {
     const mapCard='background:var(--card);border-radius:var(--r-card);overflow:hidden;box-shadow:var(--shadow-card);';
     const mapFoot='display:flex;align-items:center;gap:12px;padding:18px 22px;';
     const mapDot='flex:none;width:10px;height:10px;border-radius:999px;background:var(--green);box-shadow:0 0 0 4px rgba(0,132,109,0.18);';
-    const teamGrid = m?{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'16px',marginTop:'36px'}:{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:'24px',marginTop:'40px'};
+    const teamGrid = m?{display:'grid',gridTemplateColumns:'1fr',gap:'18px',marginTop:'36px'}:{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:'24px',marginTop:'40px'};
     const teamCard='position:relative;border-radius:var(--r-card);overflow:hidden;box-shadow:var(--shadow-card);transition:transform 320ms cubic-bezier(0.22,1,0.36,1),box-shadow 320ms cubic-bezier(0.22,1,0.36,1);';
-    const teamPic='position:relative;aspect-ratio:4/5;overflow:hidden;';
-    const teamPhoto='position:absolute;inset:0;background:linear-gradient(150deg,#3a5a72,#0c3a5e 55%,#00846d);';
-    const teamOverlay='position:absolute;inset:0;background:linear-gradient(to top,rgba(0,20,34,0.78) 0%,rgba(0,20,34,0.12) 46%,transparent 70%);';
-    const teamLink='position:absolute;top:14px;right:14px;width:38px;height:38px;border-radius:999px;background:rgba(255,255,255,0.92);color:var(--ink);display:inline-flex;align-items:center;justify-content:center;transition:all 180ms;';
-    const teamCaption='position:absolute;left:0;right:0;bottom:0;padding:'+(m?'16px':'20px')+';display:flex;flex-direction:column;gap:2px;';
-    const teamName='color:var(--card);font:500 '+(m?'16px':'18px')+' var(--font-text);';
-    const teamRole='color:var(--green-soft);font:400 '+(m?'12px':'13px')+' var(--font-text);';
+    const teamPic='position:relative;aspect-ratio:'+(m?'1/1':'4/5')+';overflow:hidden;';
+    const teamImg='position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center;';
+    const teamOverlay='position:absolute;inset:0;background:linear-gradient(to top,rgba(0,20,34,0.82) 0%,rgba(0,20,34,0.14) 48%,transparent 72%);';
+    const teamLink='position:absolute;top:14px;right:14px;width:38px;height:38px;border-radius:999px;background:rgba(255,255,255,0.94);color:var(--ink);display:inline-flex;align-items:center;justify-content:center;transition:all 180ms;z-index:2;';
+    const teamCaption='position:absolute;left:0;right:0;bottom:0;padding:22px;display:'+(m?'none':'flex')+';flex-direction:column;gap:2px;z-index:1;';
+    const teamName='color:var(--card);font:500 '+(m?'17px':'18px')+' var(--font-text);';
+    const teamRole='color:var(--green-soft);font:400 '+(m?'13px':'13px')+' var(--font-text);';
+    const teamBio = m
+      ? 'position:absolute;left:0;right:0;bottom:0;z-index:3;background:linear-gradient(to top,rgba(0,28,46,0.96) 62%,rgba(0,28,46,0) 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:22px 20px 20px;'
+      : 'position:absolute;inset:0;z-index:3;background:linear-gradient(to top,rgba(0,28,46,0.97),rgba(0,28,46,0.9));display:flex;flex-direction:column;justify-content:flex-end;padding:26px;transform:translateY(var(--bioY,101%));opacity:var(--bioO,0);transition:transform 440ms cubic-bezier(0.22,1,0.36,1),opacity 300ms;';
+    const teamBioName='color:var(--card);font:500 18px var(--font-text);';
+    const teamBioRole='color:var(--green-soft);font:400 13px var(--font-text);margin-bottom:14px;';
+    const teamBioText='margin:0 0 18px;color:rgba(255,255,255,0.86);font:400 0.9375rem/1.6 var(--font-text);';
+    const teamBioLink='display:inline-flex;align-items:center;gap:8px;color:var(--ink);background:var(--card);border-radius:999px;padding:10px 18px;font:500 13px var(--font-text);text-decoration:none;align-self:flex-start;transition:all 180ms;';
     const tagChip='display:inline-block;padding:6px 12px;border-radius:999px;background:var(--ground);color:var(--ink);font:500 13px var(--font-text);';
     const showcaseTagsRow={display:'flex',flexWrap:'wrap',gap:'8px',marginTop:'8px'};
     const showcaseTitle="margin:0 0 12px;color:var(--ink);font:500 clamp(1.5rem,2.4vw,2rem)/1.15 var(--font-display);letter-spacing:-0.02em;";
@@ -671,7 +732,7 @@ class Component extends DCLogic {
       engineTabs:engineTabs, engineTabsRow:engineTabsRow, showcaseCard:showcaseCard, showcaseText:showcaseText, showcaseIconChip:showcaseIconChip, showcaseImg:showcaseImg, showcaseTitle:showcaseTitle, showcaseBody:showcaseBody, showcaseTagsRow:showcaseTagsRow, tagChip:tagChip,
       activeIcon:this.icon(eng.ic,false,30), activeTitle:eng.t, activeBody:eng.b, activeTags:eng.tags, activeImgEl:activeImgEl,
       mapCard:mapCard, mapFoot:mapFoot, mapDot:mapDot,
-      teamGrid:teamGrid, teamCard:teamCard, teamPic:teamPic, teamPhoto:teamPhoto, teamOverlay:teamOverlay, teamLink:teamLink, teamCaption:teamCaption, teamName:teamName, teamRole:teamRole,
+      teamGrid:teamGrid, teamCard:teamCard, teamPic:teamPic, teamImg:teamImg, teamOverlay:teamOverlay, teamLink:teamLink, teamCaption:teamCaption, teamName:teamName, teamRole:teamRole, teamBio:teamBio, teamBioName:teamBioName, teamBioRole:teamBioRole, teamBioText:teamBioText, teamBioLink:teamBioLink,
       isHome:s.page==='home',isServices:s.page==='services',isAbout:s.page==='about',isWork:s.page==='work',isContact:s.page==='contact',isPrivacy:s.page==='privacy',isTerms:s.page==='terms',
       goHome:this.go('home'),goServices:this.go('services'),goAbout:this.go('about'),goWork:this.go('work'),goContact:this.go('contact'),goPrivacy:this.go('privacy'),goTerms:this.go('terms'),
       toggleMenu:()=>this.setState(st=>({menu:!st.menu})),
